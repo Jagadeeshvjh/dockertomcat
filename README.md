@@ -15,7 +15,7 @@ This is done through multiple-touch points.
     * It will replace existing war in the staging area and hence the name of the war is always derived from app name itself and not the version
  * Dockerfile
     * The docker file is a standard docker file that imports from tomcat:9 and adds the default user and open up the manager GUI
-    * It runs a script that triggers tomcat startup and then starts watching the staging area (shared volume to container) for any file changes.
+    * It runs a [script] (https://github.com/suchiksagar/dockertomcat/blob/master/docker/wardeployer.sh) that triggers tomcat startup and then starts watching the staging area (shared volume to container) for any file changes.
     * Any new files/modified files are automatically dropped into tomcat webapps which triggers anto-reload there by refreshing the application.
 
 ## Run
