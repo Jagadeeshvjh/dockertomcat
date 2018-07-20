@@ -22,5 +22,7 @@ This is done through multiple-touch points.
 If you need to run this project, either clone the repo and build the image. Or run the docker image directly from repo: 
 `docker run -p 8080:8080 -d --name tom -v <YOUR_VOLUME>:/usr/local/stagingwebapps wintersoldier/tomcat_ci:1.0`
 Start running mvn install from any project and make sure to include the dependency plugin copying war to this shared volume as mentioned in the POM section above.
+
+Note: Access tomcat manager UI using UN: admin PWD: admin on <HOST_IP>:<THE_PORT_U_MAPPED>/
     
     
