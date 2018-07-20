@@ -12,6 +12,7 @@
         <spring.boot.version>1.5.9.RELEASE</spring.boot.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <war.staging.directory>${project.basedir}/deployed</war.staging.directory>
     </properties>
 
     <dependencyManagement>
@@ -40,7 +41,7 @@
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-tomcat</artifactId>
-        <!--<scope>provided</scope>-->
+        <scope>provided</scope>
     </dependency>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -95,7 +96,7 @@
                                     <destFileName>dockertomcat.war</destFileName>
                                 </artifactItem>
                             </artifactItems>
-                            <outputDirectory>${project.basedir}/deployed</outputDirectory>
+                            <outputDirectory>${war.staging.directory}</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
